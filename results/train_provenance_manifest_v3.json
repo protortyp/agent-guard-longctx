@@ -1,0 +1,411 @@
+{
+  "created_at_utc": "2026-11-20T12:52:53.597283+00:00",
+  "recipe_version": "v3",
+  "seed": 42,
+  "tokenizer": "answerdotai/ModernBERT-base@8949b909ec900327062f0ebf497f51aef5e6f0c8",
+  "allowed_licenses": [
+    "apache-2.0",
+    "bsd-2-clause",
+    "bsd-3-clause",
+    "cc0-1.0",
+    "mit"
+  ],
+  "forbidden_datasets": [
+    "JailbreakBench/JBB-Behaviors",
+    "Slfgod/prompt-guard",
+    "ai4cloud/CloudEval-YAML",
+    "cyberec/Prompt-injection-dataset",
+    "deepset/prompt-injections",
+    "h1alexbel/github-readmes",
+    "prodnull/prompt-injection-repo-dataset"
+  ],
+  "dedup_removed": {
+    "base": 2079,
+    "short_med_pool": 10,
+    "deep_pool": 66,
+    "post_composite_train": 2,
+    "post_composite_dev": 0
+  },
+  "collect_stats": {
+    "yanismiraoui_v2": {
+      "raw_loaded": 6250,
+      "kept_pre_dedup": 6250,
+      "excluded_heldout": 0
+    },
+    "spml": {
+      "raw_loaded": 7638,
+      "kept_pre_dedup": 7638,
+      "excluded_heldout": 0
+    },
+    "slabs": {
+      "raw_loaded": 11089,
+      "kept_pre_dedup": 11086,
+      "excluded_heldout": 3
+    },
+    "gandalf": {
+      "raw_loaded": 1000,
+      "kept_pre_dedup": 1000,
+      "excluded_heldout": 0
+    },
+    "jailbreak_hub": {
+      "raw_loaded": 3605,
+      "kept_pre_dedup": 3604,
+      "excluded_heldout": 1
+    },
+    "jackhhao": {
+      "raw_loaded": 1306,
+      "kept_pre_dedup": 1305,
+      "excluded_heldout": 1
+    },
+    "jailbreak_success": {
+      "raw_loaded": 1800,
+      "kept_pre_dedup": 1800,
+      "excluded_heldout": 0
+    },
+    "shane_corpus": {
+      "raw_loaded": 1508,
+      "kept_pre_dedup": 1505,
+      "excluded_heldout": 3
+    },
+    "darkknight": {
+      "raw_loaded": 500,
+      "kept_pre_dedup": 253,
+      "excluded_heldout": 247
+    },
+    "naomibas": {
+      "raw_loaded": 100,
+      "kept_pre_dedup": 100,
+      "excluded_heldout": 0
+    },
+    "hse_llm": {
+      "raw_loaded": 300,
+      "kept_pre_dedup": 250,
+      "excluded_heldout": 50
+    },
+    "aestera": {
+      "raw_loaded": 40,
+      "kept_pre_dedup": 40,
+      "excluded_heldout": 0
+    },
+    "gretel_sql": {
+      "raw_loaded": 2200,
+      "kept_pre_dedup": 2200,
+      "excluded_heldout": 0
+    },
+    "wikisql_train": {
+      "raw_loaded": 1500,
+      "kept_pre_dedup": 1500,
+      "excluded_heldout": 0
+    },
+    "limbic_mcp": {
+      "raw_loaded": 1200,
+      "kept_pre_dedup": 1200,
+      "excluded_heldout": 0
+    },
+    "playwright_mcp": {
+      "raw_loaded": 1200,
+      "kept_pre_dedup": 1200,
+      "excluded_heldout": 0
+    },
+    "hermes_fn": {
+      "raw_loaded": 1500,
+      "kept_pre_dedup": 1500,
+      "excluded_heldout": 0
+    },
+    "ericlu_sys": {
+      "raw_loaded": 2000,
+      "kept_pre_dedup": 2000,
+      "excluded_heldout": 0
+    },
+    "awesome_prompts": {
+      "raw_loaded": 250,
+      "kept_pre_dedup": 250,
+      "excluded_heldout": 0
+    },
+    "oasst1": {
+      "raw_loaded": 3500,
+      "kept_pre_dedup": 3499,
+      "excluded_heldout": 1
+    },
+    "ultrachat_200k": {
+      "raw_loaded": 5000,
+      "kept_pre_dedup": 5000,
+      "excluded_heldout": 0
+    },
+    "cybernative_sec": {
+      "raw_loaded": 1800,
+      "kept_pre_dedup": 1800,
+      "excluded_heldout": 0
+    },
+    "cve_pre2024": {
+      "raw_loaded": 2200,
+      "kept_pre_dedup": 2200,
+      "excluded_heldout": 0
+    },
+    "zeroshot_sec": {
+      "raw_loaded": 1000,
+      "kept_pre_dedup": 1000,
+      "excluded_heldout": 0
+    },
+    "patched_readme": {
+      "raw_loaded": 16,
+      "kept_pre_dedup": 16,
+      "excluded_heldout": 0
+    },
+    "terraform_iac": {
+      "raw_loaded": 41,
+      "kept_pre_dedup": 41,
+      "excluded_heldout": 0
+    },
+    "github_yaml_ci": {
+      "raw_loaded": 1584,
+      "kept_pre_dedup": 1584,
+      "excluded_heldout": 0
+    },
+    "github_code_clean": {
+      "raw_loaded": 1597,
+      "kept_pre_dedup": 1597,
+      "excluded_heldout": 0
+    }
+  },
+  "train_v3": {
+    "total": 67588,
+    "benign_0": 44965,
+    "attack_1": 22623,
+    "hard_negative_0": 44965,
+    "benign_ratio": 0.6653,
+    "mean_char_length": 2055.3,
+    "max_char_length": 55089,
+    "by_license": {
+      "apache-2.0": 20823,
+      "bsd-3-clause": 1380,
+      "cc0-1.0": 3172,
+      "mit": 42213
+    },
+    "by_source": {
+      "aestera": 36,
+      "awesome_prompts": 228,
+      "cve_pre2024": 2024,
+      "cybernative_sec": 1653,
+      "darkknight": 232,
+      "ericlu_sys": 1840,
+      "gandalf": 917,
+      "github_code_clean": 6365,
+      "github_yaml_ci": 1215,
+      "gretel_sql": 2024,
+      "hermes_fn": 2041,
+      "hse_llm": 173,
+      "indirect_injection_composite": 6500,
+      "jackhhao": 659,
+      "jailbreak_hub": 3242,
+      "jailbreak_success": 1604,
+      "limbic_mcp": 1740,
+      "naomibas": 92,
+      "oasst1": 3219,
+      "patched_readme": 119,
+      "playwright_mcp": 281,
+      "shane_corpus": 1366,
+      "slabs": 10163,
+      "spml": 6981,
+      "terraform_iac": 36,
+      "ultrachat_200k": 4788,
+      "wikisql_train": 1380,
+      "yanismiraoui_v2": 5750,
+      "zeroshot_sec": 920
+    }
+  },
+  "dev_internal_v3": {
+    "total": 5749,
+    "benign_0": 3847,
+    "attack_1": 1902,
+    "hard_negative_0": 3847,
+    "benign_ratio": 0.6692,
+    "mean_char_length": 1961.6,
+    "max_char_length": 25461,
+    "by_license": {
+      "apache-2.0": 1740,
+      "bsd-3-clause": 120,
+      "cc0-1.0": 276,
+      "mit": 3613
+    },
+    "by_source": {
+      "aestera": 4,
+      "awesome_prompts": 20,
+      "cve_pre2024": 176,
+      "cybernative_sec": 144,
+      "darkknight": 20,
+      "ericlu_sys": 160,
+      "gandalf": 80,
+      "github_code_clean": 491,
+      "github_yaml_ci": 106,
+      "gretel_sql": 176,
+      "hermes_fn": 172,
+      "hse_llm": 15,
+      "indirect_injection_composite": 500,
+      "jackhhao": 57,
+      "jailbreak_hub": 282,
+      "jailbreak_success": 140,
+      "limbic_mcp": 153,
+      "naomibas": 8,
+      "oasst1": 280,
+      "patched_readme": 7,
+      "playwright_mcp": 24,
+      "shane_corpus": 119,
+      "slabs": 884,
+      "spml": 607,
+      "terraform_iac": 3,
+      "ultrachat_200k": 421,
+      "wikisql_train": 120,
+      "yanismiraoui_v2": 500,
+      "zeroshot_sec": 80
+    }
+  },
+  "indirect_pairs_stats": {
+    "train": {
+      "eligible_short_carriers": 6949,
+      "eligible_deep_inj_carriers": 4997,
+      "eligible_deep_ben_carriers": 4986,
+      "short_pairs_created": 2500,
+      "deep_pairs_created": 4000,
+      "total_pairs_created": 6500,
+      "truncated_at_4096": 0,
+      "max_total_tokens": 4040,
+      "short_injected_tokens": {
+        "min": 136,
+        "p50": 515,
+        "p90": 1014,
+        "max": 1175
+      },
+      "short_benign_tokens": {
+        "min": 121,
+        "p50": 471,
+        "p90": 970,
+        "max": 1000
+      },
+      "deep_injected_tokens": {
+        "min": 1206,
+        "p50": 3433,
+        "p90": 3888,
+        "max": 4040
+      },
+      "deep_benign_tokens": {
+        "min": 1215,
+        "p50": 3447,
+        "p90": 3977,
+        "max": 3980
+      },
+      "deep_needle_offset_tokens": {
+        "min": 461,
+        "p50": 2280,
+        "p90": 3401,
+        "max": 3808,
+        "in_2500_3900_tail": 1861,
+        "pct_in_2500_3900_tail": 0.4652
+      },
+      "short_raw_inline_count": 1250,
+      "deep_raw_inline_count": 1400,
+      "by_style": {
+        "indirect_deep_html_comment": 400,
+        "indirect_deep_js_comment": 193,
+        "indirect_deep_json_content": 134,
+        "indirect_deep_json_snippet": 129,
+        "indirect_deep_json_stdout": 137,
+        "indirect_deep_log_line": 467,
+        "indirect_deep_md_blockquote": 467,
+        "indirect_deep_py_docstring": 207,
+        "indirect_deep_raw_line": 501,
+        "indirect_deep_raw_para": 440,
+        "indirect_deep_raw_sentence": 459,
+        "indirect_deep_yaml_comment": 466,
+        "indirect_short_html_comment": 208,
+        "indirect_short_js_comment": 111,
+        "indirect_short_json_content": 70,
+        "indirect_short_json_snippet": 72,
+        "indirect_short_json_stdout": 67,
+        "indirect_short_log_line": 208,
+        "indirect_short_md_blockquote": 209,
+        "indirect_short_py_docstring": 97,
+        "indirect_short_raw_line": 434,
+        "indirect_short_raw_para": 397,
+        "indirect_short_raw_sentence": 419,
+        "indirect_short_yaml_comment": 208
+      }
+    },
+    "dev": {
+      "eligible_short_carriers": 604,
+      "eligible_deep_inj_carriers": 435,
+      "eligible_deep_ben_carriers": 433,
+      "short_pairs_created": 192,
+      "deep_pairs_created": 308,
+      "total_pairs_created": 500,
+      "truncated_at_4096": 0,
+      "max_total_tokens": 4025,
+      "short_injected_tokens": {
+        "min": 169,
+        "p50": 520,
+        "p90": 1019,
+        "max": 1107
+      },
+      "short_benign_tokens": {
+        "min": 133,
+        "p50": 451,
+        "p90": 980,
+        "max": 1000
+      },
+      "deep_injected_tokens": {
+        "min": 1217,
+        "p50": 3492,
+        "p90": 3893,
+        "max": 4025
+      },
+      "deep_benign_tokens": {
+        "min": 1216,
+        "p50": 3250,
+        "p90": 3977,
+        "max": 3980
+      },
+      "deep_needle_offset_tokens": {
+        "min": 459,
+        "p50": 2536,
+        "p90": 3293,
+        "max": 3797,
+        "in_2500_3900_tail": 158,
+        "pct_in_2500_3900_tail": 0.513
+      },
+      "short_raw_inline_count": 96,
+      "deep_raw_inline_count": 112,
+      "by_style": {
+        "indirect_deep_html_comment": 30,
+        "indirect_deep_js_comment": 16,
+        "indirect_deep_json_content": 11,
+        "indirect_deep_json_snippet": 7,
+        "indirect_deep_json_stdout": 12,
+        "indirect_deep_log_line": 35,
+        "indirect_deep_md_blockquote": 36,
+        "indirect_deep_py_docstring": 14,
+        "indirect_deep_raw_line": 38,
+        "indirect_deep_raw_para": 36,
+        "indirect_deep_raw_sentence": 38,
+        "indirect_deep_yaml_comment": 35,
+        "indirect_short_html_comment": 16,
+        "indirect_short_js_comment": 8,
+        "indirect_short_json_content": 4,
+        "indirect_short_json_snippet": 3,
+        "indirect_short_json_stdout": 9,
+        "indirect_short_log_line": 16,
+        "indirect_short_md_blockquote": 16,
+        "indirect_short_py_docstring": 8,
+        "indirect_short_raw_line": 29,
+        "indirect_short_raw_para": 37,
+        "indirect_short_raw_sentence": 30,
+        "indirect_short_yaml_comment": 16
+      }
+    }
+  },
+  "spml_symmetry_train": {
+    "pos_with_system": 1154,
+    "pos_total": 3835,
+    "neg_with_system": 956,
+    "neg_total": 3146
+  }
+}
